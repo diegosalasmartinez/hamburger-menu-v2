@@ -1,0 +1,43 @@
+.header{
+    background-color: $azulOscuro;
+    position: relative;
+}
+
+.barra{
+    display: flex;
+    padding: 0;
+    align-items: center;
+    justify-content: space-between;
+
+
+    h2{
+        color: $blanco;
+        text-transform: uppercase;
+        font-weight: $black;
+    }
+
+    
+    .navegacion{
+        display: none;
+        
+        @include tablet{
+            display: block;
+        }
+
+        a{
+            color: $blanco;
+
+            &:not(:last-child){
+                margin-right: 2.5rem;
+            }
+        }
+    }
+
+    .menu-hamburger{
+        display: block;
+        
+        @include tablet{
+            display: none;
+        }
+    }
+}
